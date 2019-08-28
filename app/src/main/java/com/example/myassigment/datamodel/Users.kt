@@ -1,12 +1,14 @@
 package com.example.myassigment.datamodel
 
+import com.google.gson.annotations.SerializedName
+
 
 data class Users (
 
     val login :String,
     val id: String,
     val node_id:String,
-    val avatar_url:String,
+    @SerializedName("avatar_url") var thumbnail: String,
     val gravatar_id:String,
     val url:String,
     val html_url:String,

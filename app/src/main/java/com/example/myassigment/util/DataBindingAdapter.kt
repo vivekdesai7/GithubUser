@@ -4,7 +4,7 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.squareup.picasso.Picasso
 
-object CustomBindingAdapter {
+object DataBindingAdapter {
 
     @JvmStatic
     @BindingAdapter("bind:image_url")

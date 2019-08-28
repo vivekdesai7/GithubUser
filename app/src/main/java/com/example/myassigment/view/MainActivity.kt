@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
         btnsearchtxt.setOnClickListener(){
             val str = searchtxt.text.toString()
             Toast.makeText(this@MainActivity, "clicked!-", Toast.LENGTH_SHORT).show();
-            viewModel.getSearchData(str);
+            if(str=="") {
+                viewModel.fetchUsers()
+            }else {
+                viewModel.getSearchData(str);
+            }
         }
     }
 
@@ -47,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             adapter.add(it)
 
         }
-//        progressBar_home.visibility = View.GONE
+
     }
 
 
